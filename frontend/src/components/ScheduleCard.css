@@ -1,0 +1,135 @@
+:root {
+  --dark-blue: #0f2034;
+  --grey: #939393;
+  --black: #051626;
+  --white: #fff;
+  --title-font: "IBM Plex Sans", sans-serif;
+  --text-font: "DM Sans", sans-serif;
+  --grey-border: 1px solid #dedede;
+}
+/* Functions */
+/* Default styles */
+
+img {
+  /* max-width: 100%; */
+  min-height: 100px;
+  vertical-align: center;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+p,
+h2 {
+  margin: 0;
+}
+
+
+.card {
+  /* max-width: 1000px; */
+
+  width: 90vw;
+  margin: 13px;
+  border-radius: 10px;
+  container-name: card;
+  container-type: inline-size;
+}
+.card__wrapper {
+  display: grid;
+  grid-template-areas: "image header" "body body";
+  grid-template-columns: 1fr 3fr;
+}
+.card__avatar {
+  grid-area: image;
+}
+.card__highlights {
+  grid-area: header;
+}
+.card__body {
+  grid-area: body;
+}
+.project__title {
+  color: var(--white);
+  font-family: var(--title-font);
+  font-size: 2.75rem;
+  text-align: center;
+}
+/* Card */
+.card__wrapper {
+  border-radius: 10px;
+  border: var(--grey-border);
+  background-color: var(--white);
+  gap: 1px 10px;
+  padding: 3px;
+  margin: 11px;
+}
+.card__avatar img {
+  border-radius: 50%;
+  border: var(--grey-border);
+  margin: 4px;
+}
+.card__highlights {
+  align-self: center;
+  font-size: 1rem;
+}
+.card__title {
+  font-family: var(--title-font);
+  font-size: 1.1rem;
+  margin: 5px;
+}
+.card__subtitle {
+  color: var(--grey);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.card__text {
+  font-size: 0.9375rem;
+  margin-bottom: 15px;
+  line-height: 25px;
+}
+.card__link {
+  font-size: 1.125rem;
+  text-decoration: underline;
+}
+.card__row-icon {
+  margin-left: 5px;
+  width: 16px;
+  vertical-align: top;
+  fill: var(--black);
+}
+@media (min-width: 500px) {
+  .project__title {
+    font-size: 3.5rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+    img {
+        max-width: 50%;
+        vertical-align: top;
+      }
+}
+
+/* Container queries */
+@container card (min-width: 500px) {
+  .card__wrapper {
+    grid-template-areas: "image header" "image body";
+    gap: 15px 30px;
+  }
+  .card__highlights {
+    align-self: end;
+  }
+  .card__title {
+    font-size: 1.6875rem;
+  }
+  .card__subtitle {
+    margin-bottom: 16px;
+  }
+  .card__text {
+    font-size: 1.125rem;
+    margin-bottom: 20px;
+  }
+  .card__link {
+    font-size: 1.125rem;
+  }
+}

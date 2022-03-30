@@ -1,0 +1,17 @@
+/* body{
+    background-color: #e8e0f1;
+} */
+* {
+  margin: 0;
+  scroll-behavior: smooth;
+}
+.home {
+  padding-top: 80px;
+  min-height: fit-content !important;
+}
+
+.timer-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  
