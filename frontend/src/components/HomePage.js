@@ -61,7 +61,7 @@ export default function Home() {
     useEffect(() => {
         setInterval(() => {
             scheduleFunc();
-        }, 1)
+        }, 100)
     }, [])
 
     const [flag, setflag] = React.useState(false);
